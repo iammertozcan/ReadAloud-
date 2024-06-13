@@ -708,7 +708,68 @@
                     <view key="view" id="ERx-hH-rdd">
                         <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="uNj-k7-GX5">
+                                <rect key="frame" x="363" y="223" width="104" height="32"/>
+                                <buttonCell key="cell" type="push" title="Read Aloud" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="67T-2q-lwn">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="readAloudButtonClickedWithSender:" target="5gI-5U-AMq" id="Wxa-jX-XUp"/>
+                                </connections>
+                            </button>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="0YE-hF-6IH">
+                                <rect key="frame" x="302" y="223" width="63" height="32"/>
+                                <buttonCell key="cell" type="push" title="Stop" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="o6M-IH-C92">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="stopButtonClickedWithSender:" target="5gI-5U-AMq" id="C5U-RW-L6o"/>
+                                </connections>
+                            </button>
+                            <scrollView borderType="none" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ziC-Da-svT">
+                                <rect key="frame" x="0.0" y="0.0" width="480" height="210"/>
+                                <clipView key="contentView" drawsBackground="NO" id="V9A-XK-dyT">
+                                    <rect key="frame" x="0.0" y="0.0" width="480" height="210"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <textView wantsLayer="YES" importsGraphics="NO" richText="NO" verticallyResizable="YES" spellingCorrection="YES" smartInsertDelete="YES" id="eL0-aW-pvL">
+                                            <rect key="frame" x="0.0" y="0.0" width="480" height="210"/>
+                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                            <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                            <size key="minSize" width="480" height="210"/>
+                                            <size key="maxSize" width="480" height="10000000"/>
+                                        </textView>
+                                    </subviews>
+                                </clipView>
+                                <scroller key="horizontalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" horizontal="YES" id="stZ-Qd-Ay7">
+                                    <rect key="frame" x="-100" y="-100" width="240" height="16"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </scroller>
+                                <scroller key="verticalScroller" wantsLayer="YES" verticalHuggingPriority="750" horizontal="NO" id="Dmq-O2-y9q">
+                                    <rect key="frame" x="464" y="0.0" width="16" height="210"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </scroller>
+                            </scrollView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="uNj-k7-GX5" firstAttribute="leading" secondItem="0YE-hF-6IH" secondAttribute="trailing" constant="12" symbolic="YES" id="0Te-kR-xKT"/>
+                            <constraint firstItem="uNj-k7-GX5" firstAttribute="top" secondItem="ERx-hH-rdd" secondAttribute="top" constant="20" symbolic="YES" id="5ll-g5-oa1"/>
+                            <constraint firstAttribute="trailing" secondItem="uNj-k7-GX5" secondAttribute="trailing" constant="20" symbolic="YES" id="Cl1-nz-yMK"/>
+                            <constraint firstItem="ziC-Da-svT" firstAttribute="leading" secondItem="ERx-hH-rdd" secondAttribute="leading" id="Js3-Bv-dP1"/>
+                            <constraint firstItem="0YE-hF-6IH" firstAttribute="top" secondItem="ERx-hH-rdd" secondAttribute="top" constant="20" symbolic="YES" id="MAS-Dh-bFD"/>
+                            <constraint firstItem="0YE-hF-6IH" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="ERx-hH-rdd" secondAttribute="leading" constant="20" symbolic="YES" id="hOs-jn-Jc8"/>
+                            <constraint firstAttribute="bottom" secondItem="ziC-Da-svT" secondAttribute="bottom" id="hfP-pu-yzD"/>
+                            <constraint firstAttribute="trailing" secondItem="ziC-Da-svT" secondAttribute="trailing" id="vdu-EC-kUh"/>
+                            <constraint firstItem="ziC-Da-svT" firstAttribute="top" secondItem="0YE-hF-6IH" secondAttribute="bottom" constant="20" symbolic="YES" id="xfo-0K-b4V"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="textView" destination="eL0-aW-pvL" id="Q6g-hA-Wur"/>
+                    </connections>
                 </viewController>
                 <customObject id="2Tp-Fl-jBw" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>

@@ -23,8 +23,8 @@ class ViewController: NSViewController {
         }
     }
 
-    @IBAction func readButtonClicked (sender:NSButton) {
-        print("Read button clicked to \(textView.string)")
+    @IBAction func readAloudButtonClicked (sender:NSButton) {
+        print("Read Aloud button clicked to say \(textView.string)")
     }
     
     @IBAction func stopButtonClicked (sender:NSButton) {
