@@ -6,9 +6,12 @@
 //
 
 import Cocoa
+import AVFoundation
 
 class ViewController: NSViewController {
-
+    
+    let speechSynthesizer = AVSpeechSynthesizer()
+    
     @IBOutlet var textView: NSTextView!
     
     override func viewDidLoad() {
@@ -25,6 +28,16 @@ class ViewController: NSViewController {
 
     @IBAction func readAloudButtonClicked (sender:NSButton) {
         print("Read Aloud button clicked to say \(textView.string)")
+        
+        let contents = textView.string
+        if !contents.isEmpty {
+            let speechUtterance = AVSpeechUtterance(string: contents)
+            speechSynthesizer.speak(speechUtterance)
+
+        } else {
+            let speechUtterance = AVSpeechUtterance(string: "Nothing to say to you!")
+            speechSynthesizer.speak(speechUtterance)
+        }
     }
     
     @IBAction func stopButtonClicked (sender:NSButton) {
