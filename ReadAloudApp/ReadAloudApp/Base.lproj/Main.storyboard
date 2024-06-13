@@ -715,6 +715,7 @@
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
+                                <color key="bezelColor" name="systemGreenColor" catalog="System" colorSpace="catalog"/>
                                 <connections>
                                     <action selector="readAloudButtonClickedWithSender:" target="5gI-5U-AMq" id="Wxa-jX-XUp"/>
                                 </connections>
@@ -725,6 +726,7 @@
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
+                                <color key="bezelColor" name="systemRedColor" catalog="System" colorSpace="catalog"/>
                                 <connections>
                                     <action selector="stopButtonClickedWithSender:" target="5gI-5U-AMq" id="C5U-RW-L6o"/>
                                 </connections>
