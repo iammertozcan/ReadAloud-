@@ -14,6 +14,16 @@ class ViewController: NSViewController {
     
     @IBOutlet var textView: NSTextView!
     
+    var contents:String? {
+        get {
+            return textView.string
+        }
+        
+        set {
+            textView.string = newValue!
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
